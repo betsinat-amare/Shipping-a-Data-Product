@@ -7,3 +7,5 @@ sources:
     tables:
       - name: telegram_messages
         description: Raw telegram messages loaded from JSON files.
+      - name: image_detections
+        description: YOLOv8 detection results.

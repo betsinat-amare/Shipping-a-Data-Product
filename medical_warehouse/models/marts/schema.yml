@@ -40,3 +40,16 @@ models:
       - name: view_count
         tests:
           - not_null
+
+  - name: fct_image_detections
+    description: Image classification and detection results
+    columns:
+      - name: message_id
+        tests:
+          - unique
+          - not_null
+      - name: image_category
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['promotional', 'product_display', 'lifestyle', 'other']
