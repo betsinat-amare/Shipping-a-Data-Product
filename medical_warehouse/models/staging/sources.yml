@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: medical
+    database: "{{ env_var('DB_NAME', 'medical_warehouse') }}"
+    schema: raw
+    tables:
+      - name: telegram_messages
+        description: Raw telegram messages loaded from JSON files.
